@@ -1,0 +1,19 @@
+<div *ngIf="exchangeRates">
+  <h2>Exchange Rates</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Currency</th>
+        <th>Buy</th>
+        <th>Sale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rate of exchangeRates">
+        <td>{{ rate.title }}</td>
+        <td>{{ rate.rateBuy }}</td>
+        <td>{{ rate.rateSell }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
