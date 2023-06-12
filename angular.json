@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/angular_currency-converter/",
             "outputPath": "dist/angular_currency-converter",
             "index": "src/index.html",
             "main": "src/main.ts",
