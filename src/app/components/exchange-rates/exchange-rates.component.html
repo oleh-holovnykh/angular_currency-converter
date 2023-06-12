@@ -1,11 +1,10 @@
-<div *ngIf="exchangeRates">
-  <h2>Exchange Rates</h2>
-  <table>
+<div *ngIf="exchangeRates" class="exchange-container">
+  <table class="table table-dark table-hover">
     <thead>
       <tr>
-        <th>Currency</th>
-        <th>Buy</th>
-        <th>Sale</th>
+        <th></th>
+        <th scope="col">Buy</th>
+        <th scope="col">Sale</th>
       </tr>
     </thead>
     <tbody>

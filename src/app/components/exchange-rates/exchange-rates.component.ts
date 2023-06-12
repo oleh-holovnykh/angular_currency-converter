@@ -13,14 +13,17 @@ export class ExchangeRatesComponent implements OnInit {
   constructor(private currencyService: CurrencyService) {}
 
   ngOnInit(): void {
-    if (this.exchangeRates.length === 0) {
+    const storedExchangeRates = sessionStorage.getItem('exchangeRates');
+
+    if (storedExchangeRates) {
+      this.exchangeRates = JSON.parse(storedExchangeRates);
+    } else {
       this.fetchExchangeRates();
     }
   }
 
   fetchExchangeRates(): void {
     this.currencyService.getCurrencyRates().subscribe((rates) => {
-      console.log(rates);
       const usd = rates.find(
         (item) => item.currencyCodeA === 840 && item.currencyCodeB === 980
       ) as ExtendedCurrencyData;
@@ -28,11 +31,17 @@ export class ExchangeRatesComponent implements OnInit {
         (item) => item.currencyCodeA === 978 && item.currencyCodeB === 980
       ) as ExtendedCurrencyData;
 
+      usd.rateBuy = parseFloat(usd.rateBuy.toFixed(2));
+      usd.rateSell = parseFloat(usd.rateSell.toFixed(2));
+      eur.rateBuy = parseFloat(eur.rateBuy.toFixed(2));
+      eur.rateSell = parseFloat(eur.rateSell.toFixed(2));
+
       if (usd && eur) {
         usd.title = 'USD';
         eur.title = 'EUR';
+
         this.exchangeRates = [usd, eur];
-        console.log(this.exchangeRates);
+        sessionStorage.setItem('exchangeRates', JSON.stringify(this.exchangeRates))
       }
     });
   }

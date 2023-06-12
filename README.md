@@ -1,27 +1,34 @@
-# AngularCurrencyConverter
+# Currency Converter App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+[DEMO](https://oleh-holovnykh.github.io/angular_currency-converter/)
 
-## Development server
+This project is a web application that allows users to convert currencies. Users can enter the amount in one currency, select the source currency and target currency, and instantly see the converted amount.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies Used
 
-## Code scaffolding
+- Angular
+- TypeScript
+- SCSS
+- Bootstrap
+- HTML
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
 
-## Build
+### Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Make sure you have Node.js and Angular CLI installed on your local machine.
 
-## Running unit tests
+### Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository to your local machine. `git clone https://github.com/your-username/currency-converter.git`
+2. Navigate to the project directory in your terminal. `cd currency-converter`
+3. Install the dependencies by running `npm install`.
 
-## Running end-to-end tests
+### Development
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Start the development server by executing `npm start`.
+2. Open your web browser and navigate to `http://localhost:4200/angular_currency-converter/`.
 
-## Further help
+## Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Once the development server is running, you can access the Currency Converter app in your web browser. Enter the amount in the input field, select the source currency and target currency from the dropdown menus, and the converted amount will be displayed instantly.
