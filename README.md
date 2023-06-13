@@ -32,3 +32,5 @@ Make sure you have Node.js and Angular CLI installed on your local machine.
 ## Usage
 
 Once the development server is running, you can access the Currency Converter app in your web browser. Enter the amount in the input field, select the source currency and target currency from the dropdown menus, and the converted amount will be displayed instantly.
+
+The application fetches currency exchange rates from the Monobank API
