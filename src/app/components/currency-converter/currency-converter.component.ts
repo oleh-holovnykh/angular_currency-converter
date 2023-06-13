@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ChangedInput } from 'src/app/types/changedAmount';
+import { ChangedInput } from 'src/app/types/changedInput';
 
 @Component({
   selector: 'app-currency-converter',
