@@ -1,0 +1,39 @@
+<div class="converter-container">
+  <div
+    class="converter-container__item input-group"
+  >
+    <input
+      class="form-control"
+      type="number"
+      [(ngModel)]="fromAmount"
+      (input)="convertCurrency(ChangedInput.FROM)"
+    />
+    <select
+      class="form-select"
+      [(ngModel)]="fromCurrency"
+      (change)="convertCurrency(ChangedInput.CURRENCY)"
+    >
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </div>
+
+  <div class="converter-container__item input-group">
+    <input
+      class="form-control"
+      type="number"
+      [(ngModel)]="toAmount" (input)="convertCurrency(ChangedInput.TO)"
+    />
+
+    <select
+      class="form-select"
+      [(ngModel)]="toCurrency"
+      (change)="convertCurrency(ChangedInput.CURRENCY)"
+    >
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </div>
+</div>

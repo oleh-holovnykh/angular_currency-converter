@@ -1,4 +1,4 @@
-<div *ngIf="exchangeRates" class="exchange-container">
+<div *ngIf="rates" class="exchange-container">
   <table class="table table-dark table-hover">
     <thead>
       <tr>
@@ -8,7 +8,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let rate of exchangeRates">
+      <tr *ngFor="let rate of rates">
         <td>{{ rate.title }}</td>
         <td>{{ rate.rateBuy }}</td>
         <td>{{ rate.rateSell }}</td>
